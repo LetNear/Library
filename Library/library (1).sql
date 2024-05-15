@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2024 at 12:15 AM
+-- Generation Time: May 15, 2024 at 03:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,8 +40,8 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`id`, `name`, `qty`, `price`, `description`) VALUES
-(2, 'asdfasdsdafasdf234432', 6, 99.99, 'sdfsadf'),
-(3, 'asdfasd', 3, 400.00, ''),
+(2, 'asdfasdsdafasdf234432', 3, 99.99, 'sdfsadf'),
+(3, 'asdfasd', 2, 400.00, ''),
 (4, 'sadfasdf', 9, 400.00, 'asdfasdfasdfdsa');
 
 -- --------------------------------------------------------
@@ -86,7 +86,9 @@ INSERT INTO `cart` (`id`, `user_id`, `book_id`, `quantity`) VALUES
 (31, 20, 2, 1),
 (32, 4, 2, 2),
 (33, 23, 2, 1),
-(34, 23, 3, 1);
+(34, 23, 3, 1),
+(37, 27, 2, 1),
+(38, 27, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -152,7 +154,11 @@ INSERT INTO `user` (`userID`, `nickName`, `fullName`, `email`, `password`) VALUE
 (20, '', 'Lawrence', 'noble@noble.com', '$2y$10$EWAH0KbQSk52q3sCHv.fjO8LKUDACsqXD8qc3gFLIlKsdvawY2zye'),
 (21, 'sadfas', 'sdfasdf', 'bopenales@my.cspc.edu.ph', '$2y$10$3ftPHR/7OwESpkldSaqK.u9oOraZd/BVcX0Tp0nyAt0CRwaD0lAzC'),
 (22, '', 'Boyet Penales', 'bopenales@my.cspc.edu.ph', '$2y$10$LRFuG3PxGCP6.CeuikaS/uVQyy7tS8F8aqRPfOEjIqsv55Mjl8S9O'),
-(23, '', 'sadfsadf', 'email@email.com', '$2y$10$EWAVdBKdOmSWdtklXSWJseS7iw2KBy3ibqPncOpIpSIEQp6Wgqe2y');
+(23, '', 'sadfsadf', 'email@email.com', '$2y$10$EWAVdBKdOmSWdtklXSWJseS7iw2KBy3ibqPncOpIpSIEQp6Wgqe2y'),
+(24, '', 'asdfasdf', 'testing1@gmail.com', '$2y$10$78O9N3o9OIFWi1CEIs05COFjP8ZOWB7UtnqkyT0gUaUYEq6vkX8Au'),
+(25, '', 'asdfasdf', 'asdfasd@asdfas.asdfsadf', '$2y$10$aJVXQeI.unu6A6apDp29J.aKu.PNhHR98Zbf4U8a/L5HoWnJ/sYMK'),
+(26, '', 'asdfasdf', 'asdf@asdf.asdfsadf', '$2y$10$fRAtIJAx4PTmkoSAWxsLPOY3xvAnQRN8ShN6Vq43kteBU0Jt09zmW'),
+(27, '', 'Boyet Penales', 'testing123@gmail.com', '$2y$10$mLvZbcTkCJjQfCXwo7sFP.KH9rkyI3h9fkUBIRL8l1hv/FRvV49cW');
 
 --
 -- Indexes for dumped tables
@@ -198,7 +204,7 @@ ALTER TABLE `book`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -210,7 +216,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `userID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
